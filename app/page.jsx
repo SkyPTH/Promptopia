@@ -1,7 +1,7 @@
 import React from "react";
 import Feed from "../components/Feed";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import '/app/globals.css'
+import '/app/globals.css'
 
 const Home = () => {
     return (

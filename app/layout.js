@@ -15,8 +15,8 @@ const RootLayout = ({children}) => {
             <div className="">
                 <div className=""/>
             </div>
-            <main className="app">
-                <Nav/>
+            <main className="w-full" style={{padding:"0px 50px"}}>
+                <Nav className=""/>
                 {children}
             </main>
         </Provider>

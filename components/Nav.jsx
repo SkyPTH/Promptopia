@@ -26,7 +26,7 @@ const Nav = () => {
                     className="object-contain"
                 />
             </Link>
-            <p className="logo_text">Promptopia</p>
+            <p className="logo_text" >Promptopia</p>
             <div className="sm:flex hidden">
                 {session?.user ? (
                     <div className='flex gap-3 md:gap-5'>
@@ -66,7 +66,7 @@ const Nav = () => {
                 }
             </div>
 
-            <div className=" flex relative">
+            <div className=" sm:hidden flex relative">
                 {session?.user ? (
                     <div className='flex'>
                         <Image
