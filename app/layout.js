@@ -1,4 +1,4 @@
-import '@styles/globals.css';
+import './globals.css';
 import React from "react";
 import Nav from "../components/Nav";
 import Provider from "../components/Provider";
@@ -12,8 +12,8 @@ const RootLayout = ({children}) => {
         <html lang='en'>
         <body>
         <Provider>
-            <div className="main">
-                <div className="gradient"/>
+            <div className="">
+                <div className=""/>
             </div>
             <main className="app">
                 <Nav/>
