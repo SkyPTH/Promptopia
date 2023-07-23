@@ -66,7 +66,7 @@ const Nav = () => {
                 }
             </div>
 
-            <div className="sm:hidden flex relative">
+            <div className=" flex relative">
                 {session?.user ? (
                     <div className='flex'>
                         <Image
@@ -98,9 +98,9 @@ const Nav = () => {
                                     onClick={() =>{setToggleDropdown(false);
                                                     signOut();
                                     } }
-                                    className='mt-5 w-full black-btn'
+                                    className='w-full black_btn'
                                 >
-
+                                    Sign Out
                                 </button>
                             </div>
                         )}
