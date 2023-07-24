@@ -2,3 +2,136 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.orange_gradient {
+    background: linear-gradient(45deg, #f093fb, #f5576c); /* Định nghĩa màu gradient */
+    -webkit-background-clip: text; /* Áp dụng gradient cho chữ */
+    background-clip: text; /* Áp dụng gradient cho chữ */
+    color: transparent; /* Ẩn màu chữ ban đầu */
+}
+/* styles.css hoặc tệp CSS của bạn */
+.desc {
+    font-size: 16px;
+    color: #666; /* Màu chữ, bạn có thể điều chỉnh theo mong muốn */
+    text-align: center;
+    margin-bottom: 40px; /* Khoảng cách phía dưới mô tả */
+}
+/* styles.css hoặc tệp CSS của bạn */
+.flex-center {
+    display: flex;
+    justify-content: center; /* căn giữa theo chiều ngang */
+    align-items: center; /* căn giữa theo chiều dọc */
+}
+/* styles.css hoặc tệp CSS của bạn */
+.flex-between {
+    display: flex;
+    justify-content: space-between; /* Căn các phần tử cách nhau dọc theo trục ngang */
+}
+/* styles.css hoặc tệp CSS của bạn */
+.black_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* styles.css hoặc tệp CSS của bạn */
+/* Định nghĩa Flexbox cho màn hình lớn (ví dụ: màn hình có kích thước >= 768px) */
+.flex {
+    display: flex;
+    /* Các thuộc tính Flexbox khác (justify-content, align-items, flex-direction, ...) */
+}
+
+/* Định nghĩa Flexbox cho màn hình nhỏ (ví dụ: màn hình có kích thước < 768px) */
+@media screen and (max-width: 767px) {
+    .sm\\:flex {
+        display: flex;
+        /* Các thuộc tính Flexbox khác cho màn hình nhỏ (justify-content, align-items, flex-direction, ...) */
+    }
+}
+/* styles.css hoặc tệp CSS của bạn */
+.outline_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #333; /* Định dạng viền (outline) với màu #333 (màu đen) */
+    color: #333; /* Màu chữ màu đen */
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* styles.css hoặc tệp CSS của bạn */
+/* Định nghĩa các thuộc tính cho các màn hình lớn */
+.some_element {
+    /* Các thuộc tính CSS cho màn hình lớn */
+}
+
+/* Định nghĩa các thuộc tính cho các màn hình nhỏ */
+@media screen and (max-width: 767px) {
+    .some_element {
+        /* Các thuộc tính CSS cho màn hình nhỏ */
+    }
+    .sm\\:hidden {
+        display: none; /* Ẩn các phần tử khi màn hình nhỏ */
+    }
+}
+.search_input {
+    @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+.form_textarea {
+    @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+.dropdown {
+    @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+.dropdown_link {
+    @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+/* styles.css hoặc tệp CSS của bạn */
+.dropdown_link {
+    display: block;
+    padding: 10px;
+    color: #333; /* Màu chữ, bạn có thể điều chỉnh theo mong muốn */
+    text-decoration: none;
+    transition: background-color 0.2s ease; /* Hiệu ứng màu nền khi hover */
+}
+/* styles.css hoặc tệp CSS của bạn */
+.rounded-image {
+    width: 200px; /* Định nghĩa chiều rộng của hình ảnh */
+    height: 200px; /* Định nghĩa chiều cao của hình ảnh */
+    border-radius: 50%; /* Làm tròn các góc của hình ảnh */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Định dạng các nút gốc (button) để mở dropdown menu */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown_link:hover {
+    background-color: #f1f1f1; /* Màu nền khi di chuột qua liên kết */
+}
+.head_text {
+    @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+
+.orange_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+    @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+    @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+

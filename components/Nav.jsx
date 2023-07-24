@@ -1,5 +1,6 @@
 "use client";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '/styles/globals.css'
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -19,19 +20,19 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className='flex-between w-full mb-16 pt-3'>
+    <nav className='flex-between container-fluid mb-16 pt-3'>
       <Link href='/' className='flex gap-2 flex-center'>
         <Image
-          src='/assets/images/logo.svg'
+          src='/assets/images/images.jpg'
           alt='logo'
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className='object-contain'
         />
-        <p className='logo_text'>Promptopia</p>
+        {/*<p className='text-center'>Promptopia</p>*/}
       </Link>
 
-      {/* Desktop Navigation */}
+
       <div className='sm:flex hidden'>
         {session?.user ? (
           <div className='flex gap-3 md:gap-5'>
@@ -72,10 +73,10 @@ const Nav = () => {
         )}
       </div>
 
-      {/* Mobile Navigation */}
+
       <div className='sm:hidden flex relative'>
         {session?.user ? (
-          <div className='flex'>
+          <div className='flex float-end'>
             <Image
               src={session?.user.image}
               width={37}

@@ -1,17 +1,19 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '/styles/globals.css'
+import React, { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
-    <div className='mt-16 prompt_layout'>
+    <div className='container-fluid row'>
       {data.map((post) => (
         <PromptCard
           key={post._id}
           post={post}
           handleTagClick={handleTagClick}
+          className='col-4'
         />
       ))}
     </div>
@@ -21,7 +23,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
 const Feed = () => {
   const [allPosts, setAllPosts] = useState([]);
 
-  // Search states
+
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
@@ -38,7 +40,7 @@ const Feed = () => {
   }, []);
 
   const filterPrompts = (searchtext) => {
-    const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+    const regex = new RegExp(searchtext, "i");
     return allPosts.filter(
       (item) =>
         regex.test(item.creator.username) ||
@@ -68,8 +70,8 @@ const Feed = () => {
   };
 
   return (
-    <section className='feed'>
-      <form className='relative w-full flex-center'>
+    <section className='container-fluid'>
+      <form className='relative w-full flex-center mb-4'>
         <input
           type='text'
           placeholder='Search for a tag or a username'
@@ -77,10 +79,11 @@ const Feed = () => {
           onChange={handleSearchChange}
           required
           className='search_input peer'
+
         />
       </form>
 
-      {/* All Prompts */}
+
       {searchText ? (
         <PromptCardList
           data={searchedResults}
